@@ -1,0 +1,131 @@
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    
+    /* Virtual Classroom Golden Theme */
+    --golden-50: 45 100% 97%;
+    --golden-100: 45 100% 92%;
+    --golden-200: 45 100% 85%;
+    --golden-300: 45 100% 75%;
+    --golden-400: 45 100% 65%;
+    --golden-500: 45 100% 55%;
+    --golden-600: 45 100% 45%;
+    --golden-700: 45 100% 35%;
+    --golden-800: 45 100% 25%;
+    --golden-900: 45 100% 15%;
+    
+    --golden-glow: 45 100% 60%;
+    --golden-soft: 45 100% 70%;
+    --golden-dark: 45 100% 20%;
+    
+    --classroom-bg: 240 10% 4%;
+    --classroom-overlay: 240 10% 6%;
+    --classroom-border: 45 100% 40% / 0.2;
+    
+    --avatar-frame: 45 100% 50%;
+    --avatar-glow: 45 100% 60% / 0.3;
+    
+    --speaking-pulse: 45 100% 60%;
+    --speaking-indicator: 45 100% 50%;
+    
+    --connection-strong: 142 76% 36%;
+    --connection-medium: 45 100% 50%;
+    --connection-weak: 0 84% 60%;
+    
+    --transcript-ai: 45 100% 50% / 0.1;
+    --transcript-user: 217 91% 60% / 0.1;
+    
+    /* Shadcn/ui defaults (keep these for compatibility) */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-gradient-cinematic {
+    background: linear-gradient(135deg, hsl(var(--classroom-bg)) 0%, hsl(var(--golden-dark)) 100%);
+  }
+  
+  .border-golden {
+    border-image: linear-gradient(45deg, hsl(var(--golden-400)), hsl(var(--golden-600))) 1;
+  }
+  
+  .shadow-golden-glow {
+    box-shadow: 0 0 20px hsl(var(--golden-glow) / 0.3);
+  }
+}
+
+/* Custom scrollbar for cinematic theme */
+@layer utilities {
+  .scrollbar-cinematic {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--golden-600)) transparent;
+  }
+  
+  .scrollbar-cinematic::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-cinematic::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-cinematic::-webkit-scrollbar-thumb {
+    background: hsl(var(--golden-600));
+    border-radius: 3px;
+  }
+  
+  .scrollbar-cinematic::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--golden-500));
+  }
+}
